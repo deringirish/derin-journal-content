@@ -1,0 +1,14 @@
+{
+  "title": "Research Notes: High-Dimensional Vector Search & HNSW Indexing",
+  "description": "Investigating approximate nearest neighbor (ANN) search algorithms, cosine similarity performance, and hierarchical navigable small world graphs.",
+  "published": true,
+  "publishedAt": "2026-08-04",
+  "category": "Research Journey",
+  "readingTime": "3 min read",
+  "tags": [
+    "vector-search",
+    "ai",
+    "algorithms",
+    "database"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Project Case Study: Building a Realtime Markdown CMS",
+  "description": "How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.",
+  "published": true,
+  "publishedAt": "2026-08-03",
+  "category": "Project Journey",
+  "readingTime": "2 min read",
+  "tags": [
+    "javascript",
+    "webdev",
+    "architecture",
+    "cms"
+  ]
+}

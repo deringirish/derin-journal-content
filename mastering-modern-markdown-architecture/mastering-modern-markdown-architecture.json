@@ -1,0 +1,14 @@
+{
+  "title": "Mastering Modern Markdown Architecture",
+  "description": "A complete deep-dive into standard & extended Markdown features, custom badges, and article bundles.",
+  "published": true,
+  "publishedAt": "2026-08-07",
+  "category": "Learning Journey",
+  "readingTime": "2 min read",
+  "tags": [
+    "markdown",
+    "architecture",
+    "webdev",
+    "css"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "sample1",
+  "description": "Journal entry about sample1.",
+  "published": true,
+  "publishedAt": "2026-08-08",
+  "category": "Learning Journey",
+  "readingTime": "2 min read",
+  "tags": [
+    "learning-journey"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Deep Learning: Building Transformers from Scratch",
+  "description": "Understanding attention mechanisms, multi-head attention, and positional encodings by implementing GPT from first principles.",
+  "published": true,
+  "publishedAt": "2026-08-01",
+  "category": "Learning Journey",
+  "readingTime": "3 min read",
+  "tags": [
+    "machine-learning",
+    "python",
+    "deep-learning",
+    "ai"
+  ]
+}
