@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastering Modern Markdown Architecture</title>
+  <meta name="description" content="A complete deep-dive into standard &amp; extended Markdown features, custom badges, and article bundles.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../journal.css">
+  <script src="../journal.js" defer></script>
+</head>
+<body class="journal-body">
+  <div class="journal-container">
+    <main class="journal-content">
+      <h2 id="toc">Table of Contents</h2>
+<ul>
+<li><a href="#sec-bundle">1. Article Bundle Architecture</a></li>
+<li><a href="#sec-inline">2. Inline Styling & Badges</a></li>
+<li><a href="#sec-code">3. Code Blocks & Copy Button</a></li>
+<li><a href="#sec-assets">4. Local Image Assets</a></li>
+</ul>
+<hr>
+<h2 id="sec-bundle">1. Article Bundle Architecture</h2>
+<p>This article uses the <strong>1 Folder = 1 Article + 1 Assets Directory</strong> architecture:</p>
+<div class="code-block-wrapper"><div class="code-header"><span class="code-filename">Text</span><button class="code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-text">journals/2026/mastering-modern-markdown-architecture/
+├── mastering-modern-markdown-architecture.md
+└── assets/
+    └── architecture.png</code></pre></div><hr>
+<h2 id="sec-inline">2. Inline Styling & Badges</h2>
+<ul>
+<li><strong>Highlights</strong>: <mark>Classic warm yellow highlighter pen</mark> for important notes.</li>
+<li><strong>Strikethrough</strong>: <del>Outdated legacy approach</del> with Emerald Green line.</li>
+<li><strong>Do&#39;s &amp; Don&#39;ts Badges</strong>:<ul>
+<li><input disabled="" type="checkbox"> <strong>Recommended Best Practice</strong>: Keep assets co-located with their article.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Anti-Pattern</strong>: Don&#39;t dump all images into a single global folder.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="sec-code">3. Code Blocks & Copy Button</h2>
+<div class="code-block-wrapper"><div class="code-header"><span class="code-filename">pipeline/renderer.py</span><button class="code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-python">def render_article(file_path: str) -&gt; str:
+    """Parses frontmatter and renders markdown cleanly."""
+    print(f"Rendering article: {file_path}")
+    return "SUCCESS"</code></pre></div><hr>
+<h2 id="sec-assets">4. Local Image Assets</h2>
+<p>Here is a local image asset loaded using a direct relative path (<code>./assets/architecture.png</code>):</p>
+<p><img src="assets/architecture.png" alt="Architecture Overview" title="Markdown System Architecture" class="journal-img"></p>
+
+    </main>
+  </div>
+</body>
+</html>

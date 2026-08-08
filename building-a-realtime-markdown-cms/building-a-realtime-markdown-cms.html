@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Case Study: Building a Realtime Markdown CMS</title>
+  <meta name="description" content="How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../journal.css">
+  <script src="../journal.js" defer></script>
+</head>
+<body class="journal-body">
+  <div class="journal-container">
+    <main class="journal-content">
+      <h2 id="toc">Table of Contents</h2>
+<ul>
+<li><a href="#sec-objectives">1. Project Objectives</a></li>
+<li><a href="#sec-arch">2. System Architecture</a></li>
+<li><a href="#sec-impl">3. Code Implementation</a></li>
+</ul>
+<hr>
+<h2 id="sec-objectives">1. Project Objectives</h2>
+<p>The goal was to create a <strong>zero-backend, browser-native CMS dashboard</strong> that allows technical writers to manage Frontmatter metadata directly on their local file system:</p>
+<ul>
+<li><strong>Zero Server Setup</strong>: Runs 100% in the browser via <code>window.showDirectoryPicker()</code>.</li>
+<li><strong>Bi-Directional Sync</strong>: Editing metadata in the UI rewrites Frontmatter blocks directly to disk.</li>
+<li><strong>Article Bundle Support</strong>: Manages nested folder bundles (<code>journals/2026/slug/slug.md</code>).</li>
+</ul>
+<hr>
+<h2 id="sec-arch">2. System Architecture</h2>
+<div class="code-block-wrapper"><div class="code-header"><span class="code-filename">Text</span><button class="code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-text">Browser UI (dashboard.html)
+      │
+      ▼
+FileSystem Access API (window.showDirectoryPicker)
+      │
+      ├── Read file contents (FileReader)
+      ├── Parse YAML Frontmatter block
+      └── Write updated content (createWritable)</code></pre></div><hr>
+<h2 id="sec-impl">3. Code Implementation</h2>
+<div class="code-block-wrapper"><div class="code-header"><span class="code-filename">preview/dashboard.js</span><button class="code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-javascript">async function saveMetadataToFile(fileHandle, newFrontmatter, bodyContent) {
+  const updatedContent = `&lt;span class="math-inline"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;mstyle mathcolor="#cc0000"&gt;&lt;mtext&gt;\n&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mstyle mathcolor="#cc0000"&gt;&lt;mtext&gt;\n&lt;/mtext&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;{newFrontmatter}\n\n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="katex-base"&gt;&lt;span class="katex-strut" style="height:1em;vertical-align:-0.25em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mord mathnormal"&gt;e&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0269em;"&gt;w&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.1389em;"&gt;F&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0278em;"&gt;r&lt;/span&gt;&lt;span class="mord mathnormal"&gt;o&lt;/span&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mord mathnormal"&gt;t&lt;/span&gt;&lt;span class="mord mathnormal"&gt;ma&lt;/span&gt;&lt;span class="mord mathnormal"&gt;tt&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0278em;"&gt;er&lt;/span&gt;&lt;/span&gt;&lt;span class="mord text" style="color:#cc0000;"&gt;&lt;span class="mord" style="color:#cc0000;"&gt;\n&lt;/span&gt;&lt;/span&gt;&lt;span class="mord text" style="color:#cc0000;"&gt;&lt;span class="mord" style="color:#cc0000;"&gt;\n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;{bodyContent.trim()}\n`;
+  const writable = await fileHandle.createWritable();
+  await writable.write(updatedContent);
+  await writable.close();
+  console.log("Saved directly to disk!");
+}</code></pre></div><ul>
+<li><input disabled="" type="checkbox"> <strong>Recommended Best Practice</strong>: Always wrap file writes in try/catch to handle permission denials.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Anti-Pattern</strong>: Don&#39;t mutate file text without preserving the original body content.</li>
+</ul>
+<p><img src="assets/cms-ui.png" alt="CMS Dashboard UI Architecture" title="Journal CMS Metadata Manager Interface" class="journal-img"></p>
+
+    </main>
+  </div>
+</body>
+</html>
