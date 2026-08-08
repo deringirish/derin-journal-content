@@ -1,148 +1,146 @@
-[
-  {
-    "title": "sample1",
-    "description": "Journal entry about sample1.",
-    "slug": "sample1",
-    "publishedAt": "2026-08-08",
-    "category": "Learning Journey",
-    "readingTime": "2 min read",
-    "tags": [
-      "learning-journey"
-    ],
-    "htmlUrl": "sample1/sample1.html",
-    "htmlPath": "sample1/sample1.html",
-    "jsonPath": "sample1/sample1.json"
-  },
-  {
-    "title": "syntax-stress-test",
-    "description": "",
-    "slug": "syntax-stress-test",
-    "publishedAt": "2026-08-08",
-    "category": "General",
-    "readingTime": "6 min read",
-    "tags": [
-      "general"
-    ],
-    "htmlUrl": "syntax-stress-test/syntax-stress-test.html",
-    "htmlPath": "syntax-stress-test/syntax-stress-test.html",
-    "jsonPath": "syntax-stress-test/syntax-stress-test.json"
-  },
-  {
-    "title": "Exploring Rust Concurrency & Async Channels",
-    "description": "Advanced deep dive into Tokio channels & MPSC.",
-    "slug": "exploring-rust-concurrency",
-    "publishedAt": "2026-08-07",
-    "category": "Learning Journey",
-    "readingTime": "4 min read",
-    "tags": [
-      "rust",
-      "async",
-      "concurrency"
-    ],
-    "htmlUrl": "exploring-rust-concurrency/exploring-rust-concurrency.html",
-    "htmlPath": "exploring-rust-concurrency/exploring-rust-concurrency.html",
-    "jsonPath": "exploring-rust-concurrency/exploring-rust-concurrency.json"
-  },
-  {
-    "title": "Mastering Modern Markdown Architecture",
-    "description": "A complete deep-dive into standard & extended Markdown features, custom badges, and article bundles.",
-    "slug": "mastering-modern-markdown-architecture",
-    "publishedAt": "2026-08-07",
-    "category": "Learning Journey",
-    "readingTime": "2 min read",
-    "tags": [
-      "markdown",
-      "architecture",
-      "webdev",
-      "css"
-    ],
-    "htmlUrl": "mastering-modern-markdown-architecture/mastering-modern-markdown-architecture.html",
-    "htmlPath": "mastering-modern-markdown-architecture/mastering-modern-markdown-architecture.html",
-    "jsonPath": "mastering-modern-markdown-architecture/mastering-modern-markdown-architecture.json"
-  },
-  {
-    "title": "Personal Growth: Designing a Sustainable Deep Work Routine",
-    "description": "Structuring focus blocks, time-boxing complex engineering tasks, and maintaining mental clarity in high-velocity tech environments.",
-    "slug": "building-sustainable-deep-work-habits",
-    "publishedAt": "2026-08-06",
-    "category": "Personal Growth",
-    "readingTime": "3 min read",
-    "tags": [
-      "productivity",
-      "deep-work",
-      "mental-health",
-      "reflection"
-    ],
-    "htmlUrl": "building-sustainable-deep-work-habits/building-sustainable-deep-work-habits.html",
-    "htmlPath": "building-sustainable-deep-work-habits/building-sustainable-deep-work-habits.html",
-    "jsonPath": "building-sustainable-deep-work-habits/building-sustainable-deep-work-habits.json"
-  },
-  {
-    "title": "Career Reflections: Transitioning into Tech Leadership",
-    "description": "Key takeaways on engineering mentorship, system design trade-offs, and driving architectural decisions across cross-functional engineering teams.",
-    "slug": "navigating-senior-engineering-milestones",
-    "publishedAt": "2026-08-05",
-    "category": "Career Journey",
-    "readingTime": "2 min read",
-    "tags": [
-      "career",
-      "leadership",
-      "engineering-culture",
-      "reflection"
-    ],
-    "htmlUrl": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
-    "htmlPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
-    "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
-  },
-  {
-    "title": "Research Notes: High-Dimensional Vector Search & HNSW Indexing",
-    "description": "Investigating approximate nearest neighbor (ANN) search algorithms, cosine similarity performance, and hierarchical navigable small world graphs.",
-    "slug": "exploring-vector-search-embeddings",
-    "publishedAt": "2026-08-04",
-    "category": "Research Journey",
-    "readingTime": "3 min read",
-    "tags": [
-      "vector-search",
-      "ai",
-      "algorithms",
-      "database"
-    ],
-    "htmlUrl": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.html",
-    "htmlPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.html",
-    "jsonPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.json"
-  },
-  {
-    "title": "Project Case Study: Building a Realtime Markdown CMS",
-    "description": "How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.",
-    "slug": "building-a-realtime-markdown-cms",
-    "publishedAt": "2026-08-03",
-    "category": "Project Journey",
-    "readingTime": "2 min read",
-    "tags": [
-      "javascript",
-      "webdev",
-      "architecture",
-      "cms"
-    ],
-    "htmlUrl": "building-a-realtime-markdown-cms/building-a-realtime-markdown-cms.html",
-    "htmlPath": "building-a-realtime-markdown-cms/building-a-realtime-markdown-cms.html",
-    "jsonPath": "building-a-realtime-markdown-cms/building-a-realtime-markdown-cms.json"
-  },
-  {
-    "title": "Deep Learning: Building Transformers from Scratch",
-    "description": "Understanding attention mechanisms, multi-head attention, and positional encodings by implementing GPT from first principles.",
-    "slug": "deep-learning-transformers-from-scratch",
-    "publishedAt": "2026-08-01",
-    "category": "Learning Journey",
-    "readingTime": "3 min read",
-    "tags": [
-      "machine-learning",
-      "python",
-      "deep-learning",
-      "ai"
-    ],
-    "htmlUrl": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.html",
-    "htmlPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.html",
-    "jsonPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.json"
-  }
-]
+{
+  "generatedAt": "2026-08-08T17:33:06.362Z",
+  "count": 9,
+  "posts": [
+    {
+      "slug": "sample1",
+      "title": "sample1",
+      "description": "Journal entry about sample1.",
+      "publishedAt": "2026-08-08",
+      "category": "Learning Journey",
+      "readingTime": "2 min read",
+      "tags": [
+        "learning-journey"
+      ],
+      "htmlPath": "sample1/sample1.html",
+      "jsonPath": "sample1/sample1.json"
+    },
+    {
+      "slug": "syntax-stress-test",
+      "title": "Comprehensive Markdown Syntax & Edge-Case Stress Test",
+      "description": "Complete 100% syntax test suite covering basic, extended, GFM, nested inline styles, tables, code blocks, math, and edge cases.",
+      "publishedAt": "2026-08-08",
+      "category": "Technical Notes",
+      "readingTime": "5 min read",
+      "tags": [
+        "markdown",
+        "testing",
+        "gfm",
+        "stress-test"
+      ],
+      "htmlPath": "syntax-stress-test/syntax-stress-test.html",
+      "jsonPath": "syntax-stress-test/syntax-stress-test.json"
+    },
+    {
+      "slug": "exploring-rust-concurrency",
+      "title": "Exploring Rust Concurrency & Async Channels",
+      "description": "Advanced deep dive into Tokio channels & MPSC.",
+      "publishedAt": "2026-08-07",
+      "category": "Learning Journey",
+      "readingTime": "4 min read",
+      "tags": [
+        "rust",
+        "async",
+        "concurrency"
+      ],
+      "htmlPath": "exploring-rust-concurrency/exploring-rust-concurrency.html",
+      "jsonPath": "exploring-rust-concurrency/exploring-rust-concurrency.json"
+    },
+    {
+      "slug": "mastering-modern-markdown-architecture",
+      "title": "Mastering Modern Markdown Architecture",
+      "description": "A complete deep-dive into standard & extended Markdown features, custom badges, and article bundles.",
+      "publishedAt": "2026-08-07",
+      "category": "Learning Journey",
+      "readingTime": "2 min read",
+      "tags": [
+        "markdown",
+        "architecture",
+        "webdev",
+        "css"
+      ],
+      "htmlPath": "mastering-modern-markdown-architecture/mastering-modern-markdown-architecture.html",
+      "jsonPath": "mastering-modern-markdown-architecture/mastering-modern-markdown-architecture.json"
+    },
+    {
+      "slug": "building-sustainable-deep-work-habits",
+      "title": "Personal Growth: Designing a Sustainable Deep Work Routine",
+      "description": "Structuring focus blocks, time-boxing complex engineering tasks, and maintaining mental clarity in high-velocity tech environments.",
+      "publishedAt": "2026-08-06",
+      "category": "Personal Growth",
+      "readingTime": "3 min read",
+      "tags": [
+        "productivity",
+        "deep-work",
+        "mental-health",
+        "reflection"
+      ],
+      "htmlPath": "building-sustainable-deep-work-habits/building-sustainable-deep-work-habits.html",
+      "jsonPath": "building-sustainable-deep-work-habits/building-sustainable-deep-work-habits.json"
+    },
+    {
+      "slug": "navigating-senior-engineering-milestones",
+      "title": "Career Reflections: Transitioning into Tech Leadership",
+      "description": "Key takeaways on engineering mentorship, system design trade-offs, and driving architectural decisions across cross-functional engineering teams.",
+      "publishedAt": "2026-08-05",
+      "category": "Career Journey",
+      "readingTime": "2 min read",
+      "tags": [
+        "career",
+        "leadership",
+        "engineering-culture",
+        "reflection"
+      ],
+      "htmlPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
+      "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
+    },
+    {
+      "slug": "exploring-vector-search-embeddings",
+      "title": "Research Notes: High-Dimensional Vector Search & HNSW Indexing",
+      "description": "Investigating approximate nearest neighbor (ANN) search algorithms, cosine similarity performance, and hierarchical navigable small world graphs.",
+      "publishedAt": "2026-08-04",
+      "category": "Research Journey",
+      "readingTime": "3 min read",
+      "tags": [
+        "vector-search",
+        "ai",
+        "algorithms",
+        "database"
+      ],
+      "htmlPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.html",
+      "jsonPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.json"
+    },
+    {
+      "slug": "building-a-realtime-markdown-cms",
+      "title": "Project Case Study: Building a Realtime Markdown CMS",
+      "description": "How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.",
+      "publishedAt": "2026-08-03",
+      "category": "Project Journey",
+      "readingTime": "2 min read",
+      "tags": [
+        "javascript",
+        "webdev",
+        "architecture",
+        "cms"
+      ],
+      "htmlPath": "building-a-realtime-markdown-cms/building-a-realtime-markdown-cms.html",
+      "jsonPath": "building-a-realtime-markdown-cms/building-a-realtime-markdown-cms.json"
+    },
+    {
+      "slug": "deep-learning-transformers-from-scratch",
+      "title": "Deep Learning: Building Transformers from Scratch",
+      "description": "Understanding attention mechanisms, multi-head attention, and positional encodings by implementing GPT from first principles.",
+      "publishedAt": "2026-08-01",
+      "category": "Learning Journey",
+      "readingTime": "3 min read",
+      "tags": [
+        "machine-learning",
+        "python",
+        "deep-learning",
+        "ai"
+      ],
+      "htmlPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.html",
+      "jsonPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.json"
+    }
+  ]
+}
