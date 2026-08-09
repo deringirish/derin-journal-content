@@ -2,8 +2,8 @@
   "title": "sample",
   "description": "Here is the sample description abou this project",
   "published": false,
-  "publishedAt": "2026-08-08",
   "category": "Learning Journey",
+  "publishedAt": "2026-08-08",
   "readingTime": "1 min read",
   "tags": [
     "tag1",

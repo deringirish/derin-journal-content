@@ -76,6 +76,20 @@ html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.article-content p strong,
+.article-content p em,
+.article-content p mark,
+.article-content p code,
+.article-content p a,
+.article-content p del,
+.article-content p sub,
+.article-content p sup {
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
 }
 
 .article-container {
