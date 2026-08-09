@@ -1,0 +1,14 @@
+{
+  "title": "sample",
+  "description": "Here is the sample description abou this project",
+  "publishedAt": "2026-08-08",
+  "category": "Learning Journey",
+  "tags": [
+    "tag1",
+    "tag2",
+    "tag3",
+    "tag4"
+  ],
+  "readingTime": "1 min read",
+  "published": true
+}
