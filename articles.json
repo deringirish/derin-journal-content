@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-09T18:34:17.086Z",
-  "count": 9,
+  "generatedAt": "2026-08-09T18:40:12.056Z",
+  "count": 8,
   "posts": [
     {
       "slug": "building-a-realtime-markdown-cms",
@@ -119,20 +119,6 @@
       "published": true,
       "htmlPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
       "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
-    },
-    {
-      "slug": "sample1",
-      "title": "sample1",
-      "description": "Journal entry about sample1.",
-      "publishedAt": "2026-08-08",
-      "category": "Learning Journey",
-      "tags": [
-        "learning-journey"
-      ],
-      "readingTime": "2 min read",
-      "published": false,
-      "htmlPath": "sample1/sample1.html",
-      "jsonPath": "sample1/sample1.json"
     },
     {
       "slug": "syntax-stress-test",
