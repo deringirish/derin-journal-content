@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Case Study: Building a Realtime Markdown CMS</title>
-  <meta name="description" content="How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.">
+  <title>building-a-realtime-markdown-cms</title>
+  <meta name="description" content="">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="../journal.css">
   <script src="../journal.js" defer></script>
@@ -38,7 +38,7 @@ FileSystem Access API (window.showDirectoryPicker)
       └── Write updated content (createWritable)</code></pre></div><hr>
 <h2 id="sec-impl">3. Code Implementation</h2>
 <div class="code-block-wrapper"><div class="code-header"><span class="code-filename">preview/dashboard.js</span><button class="code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-javascript">async function saveMetadataToFile(fileHandle, newFrontmatter, bodyContent) {
-  const updatedContent = `<span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>F</mi><mi>r</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>m</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>e</mi><mi>r</mi></mrow><mstyle mathcolor="#cc0000"><mtext>\n</mtext></mstyle><mstyle mathcolor="#cc0000"><mtext>\n</mtext></mstyle></mrow><annotation encoding="application/x-tex">{newFrontmatter}\n\n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0269em;">w</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ma</span><span class="mord mathnormal">tt</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span></span><span class="mord text" style="color:#cc0000;"><span class="mord" style="color:#cc0000;">\n</span></span><span class="mord text" style="color:#cc0000;"><span class="mord" style="color:#cc0000;">\n</span></span></span></span></span></span>{bodyContent.trim()}\n`;
+  const updatedContent = `&lt;span class="math-inline"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;mstyle mathcolor="#cc0000"&gt;&lt;mtext&gt;\n&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mstyle mathcolor="#cc0000"&gt;&lt;mtext&gt;\n&lt;/mtext&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;{newFrontmatter}\n\n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="katex-base"&gt;&lt;span class="katex-strut" style="height:1em;vertical-align:-0.25em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mord mathnormal"&gt;e&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0269em;"&gt;w&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.1389em;"&gt;F&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0278em;"&gt;r&lt;/span&gt;&lt;span class="mord mathnormal"&gt;o&lt;/span&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mord mathnormal"&gt;t&lt;/span&gt;&lt;span class="mord mathnormal"&gt;ma&lt;/span&gt;&lt;span class="mord mathnormal"&gt;tt&lt;/span&gt;&lt;span class="mord mathnormal" style="margin-right:0.0278em;"&gt;er&lt;/span&gt;&lt;/span&gt;&lt;span class="mord text" style="color:#cc0000;"&gt;&lt;span class="mord" style="color:#cc0000;"&gt;\n&lt;/span&gt;&lt;/span&gt;&lt;span class="mord text" style="color:#cc0000;"&gt;&lt;span class="mord" style="color:#cc0000;"&gt;\n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;{bodyContent.trim()}\n`;
   const writable = await fileHandle.createWritable();
   await writable.write(updatedContent);
   await writable.close();
@@ -47,7 +47,7 @@ FileSystem Access API (window.showDirectoryPicker)
 <li><input disabled="" type="checkbox"> <strong>Recommended Best Practice</strong>: Always wrap file writes in try/catch to handle permission denials.</li>
 <li><input checked="" disabled="" type="checkbox"> <strong>Anti-Pattern</strong>: Don&#39;t mutate file text without preserving the original body content.</li>
 </ul>
-<p><img alt="CMS Dashboard UI Architecture" title="Journal CMS Metadata Manager Interface" class="journal-img"></p>
+<p><img src="assets/cms-ui.png" alt="CMS Dashboard UI Architecture" title="Journal CMS Metadata Manager Interface" class="journal-img"></p>
 
     </main>
   </div>

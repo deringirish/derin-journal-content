@@ -1,8 +1,38 @@
-// Global Interactive Features for Journal Articles (Immediate Top-Level Delegation)
+// Global Interactive Features & Bootstrap JS Bundle for Journal Articles
 (function () {
   if (window.__journal_js_initialized) return;
   window.__journal_js_initialized = true;
 
+  // 1. Dynamically ensure Bootstrap 5 JS Bundle is loaded for Interactive Widgets (Tabs, Accordions, Tooltips)
+  if (!window.bootstrap && !document.querySelector('script[src*="bootstrap.bundle"]')) {
+    const bsScript = document.createElement('script');
+    bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
+    bsScript.defer = true;
+    bsScript.onload = function () {
+      initBootstrapWidgets();
+    };
+    document.head.appendChild(bsScript);
+  } else if (window.bootstrap) {
+    initBootstrapWidgets();
+  }
+
+  function initBootstrapWidgets() {
+    try {
+      // Auto-initialize Tooltips if present
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new window.bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Auto-initialize Popovers if present
+      const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+      popoverTriggerList.map(function (popoverTriggerEl) {
+        return new window.bootstrap.Popover(popoverTriggerEl);
+      });
+    } catch (_) {}
+  }
+
+  // 2. Global Event Listener for Copy Code Buttons
   document.addEventListener('click', function (e) {
     const copyBtn = e.target.closest('.code-copy-btn');
     if (!copyBtn) return;
@@ -26,6 +56,57 @@
       });
     } else {
       fallbackCopyText(codeText, copyBtn);
+    }
+  });
+
+  // 3. Universal Anchor & Footnote Jump Click Listener (Clean URL, Smooth Scroll & Pulse Highlight)
+  document.addEventListener('click', function (e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+
+    // Prevent URL bar from appending #hash parameters
+    e.preventDefault();
+    e.stopPropagation();
+
+    const targetId = href.substring(1);
+    const root = anchor.getRootNode() || document;
+    let targetEl = null;
+
+    if (root.getElementById) {
+      targetEl = root.getElementById(targetId);
+    }
+    if (!targetEl && root.querySelector) {
+      try {
+        targetEl = root.querySelector('#' + CSS.escape(targetId));
+      } catch (_) {}
+    }
+    if (!targetEl) {
+      targetEl = document.getElementById(targetId);
+    }
+
+    if (targetEl) {
+      // Calculate scroll position with sticky header offset (80px)
+      const rect = targetEl.getBoundingClientRect();
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const targetScrollTop = currentScrollTop + rect.top - 80;
+
+      window.scrollTo({
+        top: Math.max(0, targetScrollTop),
+        behavior: 'smooth'
+      });
+
+      try {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (_) {}
+
+      // Add visual pulse glow
+      targetEl.classList.add('footnote-highlight');
+      setTimeout(function () {
+        targetEl.classList.remove('footnote-highlight');
+      }, 2500);
     }
   });
 

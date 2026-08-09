@@ -1,14 +1,11 @@
 {
-  "title": "Comprehensive Markdown Syntax & Edge-Case Stress Test",
-  "description": "Complete 100% syntax test suite covering basic, extended, GFM, nested inline styles, tables, code blocks, math, and edge cases.",
+  "title": "syntax-stress-test",
+  "description": "",
   "published": true,
-  "publishedAt": "2026-08-08",
-  "category": "Technical Notes",
-  "readingTime": "5 min read",
+  "publishedAt": "2026-08-09",
+  "category": "General",
+  "readingTime": "6 min read",
   "tags": [
-    "markdown",
-    "testing",
-    "gfm",
-    "stress-test"
+    "general"
   ]
 }
