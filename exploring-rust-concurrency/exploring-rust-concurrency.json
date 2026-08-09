@@ -1,11 +1,13 @@
 {
-  "title": "exploring-rust-concurrency",
-  "description": "",
+  "title": "Exploring Rust Concurrency & Async Channels",
+  "description": "Advanced deep dive into Tokio channels & MPSC.",
   "published": true,
-  "publishedAt": "2026-08-09",
-  "category": "General",
-  "readingTime": "1 min read",
+  "publishedAt": "2026-08-07",
+  "category": "Learning Journey",
+  "readingTime": "4 min read",
   "tags": [
-    "general"
+    "rust",
+    "async",
+    "concurrency"
   ]
 }

@@ -1,11 +1,14 @@
 {
   "title": "sample",
-  "description": "",
-  "published": true,
-  "publishedAt": "2026-08-09",
-  "category": "General",
+  "description": "Here is the sample description abou this project",
+  "published": false,
+  "publishedAt": "2026-08-08",
+  "category": "Learning Journey",
   "readingTime": "1 min read",
   "tags": [
-    "general"
+    "tag1",
+    "tag2",
+    "tag3",
+    "tag4"
   ]
 }
