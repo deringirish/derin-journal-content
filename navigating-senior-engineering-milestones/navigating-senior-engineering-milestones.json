@@ -1,14 +1,14 @@
 {
   "title": "Career Reflections: Transitioning into Tech Leadership",
   "description": "Key takeaways on engineering mentorship, system design trade-offs, and driving architectural decisions across cross-functional engineering teams.",
-  "published": true,
-  "category": "Career Journey",
   "publishedAt": "2026-08-05",
-  "readingTime": "2 min read",
+  "category": "Career Journey",
   "tags": [
     "career",
     "leadership",
     "engineering-culture",
     "reflection"
-  ]
+  ],
+  "readingTime": "2 min read",
+  "published": true
 }
