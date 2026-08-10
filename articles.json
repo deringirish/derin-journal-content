@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-10T04:23:56.976Z",
-  "count": 8,
+  "generatedAt": "2026-08-10T12:53:11.440Z",
+  "count": 9,
   "posts": [
     {
       "slug": "building-a-realtime-markdown-cms",
       "title": "Project Case Study: Building a Realtime Markdown CMS",
       "description": "How I architected a browser-native CMS metadata manager with WebSocket live sync and FileSystem Access API integration.",
       "publishedAt": "2026-08-03",
-      "category": "Project Journey",
+      "category": "Research Journey",
       "tags": [
         "javascript",
         "webdev",
@@ -24,7 +24,7 @@
       "title": "Personal Growth: Designing a Sustainable Deep Work Routine",
       "description": "Structuring focus blocks, time-boxing complex engineering tasks, and maintaining mental clarity in high-velocity tech environments.",
       "publishedAt": "2026-08-06",
-      "category": "Growth",
+      "category": "Learning",
       "tags": [
         "productivity",
         "deep-work",
@@ -48,7 +48,7 @@
         "deep-learning",
         "ai"
       ],
-      "readingTime": "3 min read",
+      "readingTime": "6 min read",
       "published": true,
       "htmlPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.html",
       "jsonPath": "deep-learning-transformers-from-scratch/deep-learning-transformers-from-scratch.json"
@@ -87,6 +87,21 @@
       "jsonPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.json"
     },
     {
+      "slug": "hello-world",
+      "title": "hello world",
+      "description": "Journal entry about hello world.",
+      "publishedAt": "2026-08-10",
+      "category": "Deep Work",
+      "tags": [
+        "deep-work",
+        "hello"
+      ],
+      "readingTime": "2 min read",
+      "published": true,
+      "htmlPath": "hello-world/hello-world.html",
+      "jsonPath": "hello-world/hello-world.json"
+    },
+    {
       "slug": "mastering-modern-markdown-architecture",
       "title": "Mastering Modern Markdown Architecture",
       "description": "A complete deep-dive into standard & extended Markdown features, custom badges, and article bundles.",
@@ -121,7 +136,7 @@
       "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
     },
     {
-      "slug": "syntax-stress-test",
+      "slug": "syntax-stress-test-v1-v2",
       "title": "Comprehensive Markdown Syntax & Edge-Case Stress Test",
       "description": "Complete 100% syntax test suite covering basic, extended, GFM, nested inline styles, tables, code blocks, math, and edge cases.",
       "publishedAt": "2026-08-08",
@@ -134,8 +149,8 @@
       ],
       "readingTime": "5 min read",
       "published": true,
-      "htmlPath": "syntax-stress-test/syntax-stress-test.html",
-      "jsonPath": "syntax-stress-test/syntax-stress-test.json"
+      "htmlPath": "syntax-stress-test-v1-v2/syntax-stress-test-v1-v2.html",
+      "jsonPath": "syntax-stress-test-v1-v2/syntax-stress-test-v1-v2.json"
     }
   ]
 }
