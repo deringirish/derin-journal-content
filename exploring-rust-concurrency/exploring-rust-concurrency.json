@@ -2,7 +2,7 @@
   "title": "Exploring Rust Concurrency & Async Channels",
   "description": "Advanced deep dive into Tokio channels & MPSC.",
   "publishedAt": "2026-08-07",
-  "category": "Learning Journey",
+  "category": "Learning",
   "tags": [
     "rust",
     "async",

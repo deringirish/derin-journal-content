@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-09T18:43:42.148Z",
-  "count": 8,
+  "generatedAt": "2026-08-10T04:20:59.354Z",
+  "count": 7,
   "posts": [
     {
       "slug": "building-a-realtime-markdown-cms",
@@ -24,7 +24,7 @@
       "title": "Personal Growth: Designing a Sustainable Deep Work Routine",
       "description": "Structuring focus blocks, time-boxing complex engineering tasks, and maintaining mental clarity in high-velocity tech environments.",
       "publishedAt": "2026-08-06",
-      "category": "Personal Growth",
+      "category": "Growth",
       "tags": [
         "productivity",
         "deep-work",
@@ -41,7 +41,7 @@
       "title": "Deep Learning: Building Transformers from Scratch",
       "description": "Understanding attention mechanisms, multi-head attention, and positional encodings by implementing GPT from first principles.",
       "publishedAt": "2026-08-01",
-      "category": "Learning Journey",
+      "category": "Learning",
       "tags": [
         "machine-learning",
         "python",
@@ -58,7 +58,7 @@
       "title": "Exploring Rust Concurrency & Async Channels",
       "description": "Advanced deep dive into Tokio channels & MPSC.",
       "publishedAt": "2026-08-07",
-      "category": "Learning Journey",
+      "category": "Learning",
       "tags": [
         "rust",
         "async",
@@ -91,7 +91,7 @@
       "title": "Mastering Modern Markdown Architecture",
       "description": "A complete deep-dive into standard & extended Markdown features, custom badges, and article bundles.",
       "publishedAt": "2026-08-07",
-      "category": "Learning Journey",
+      "category": "Learning",
       "tags": [
         "markdown",
         "architecture",
@@ -108,7 +108,7 @@
       "title": "Career Reflections: Transitioning into Tech Leadership",
       "description": "Key takeaways on engineering mentorship, system design trade-offs, and driving architectural decisions across cross-functional engineering teams.",
       "publishedAt": "2026-08-05",
-      "category": "Career Journey",
+      "category": "Learning",
       "tags": [
         "career",
         "leadership",
@@ -119,23 +119,6 @@
       "published": true,
       "htmlPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
       "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
-    },
-    {
-      "slug": "syntax-stress-test",
-      "title": "Comprehensive Markdown Syntax & Edge-Case Stress Test",
-      "description": "Complete 100% syntax test suite covering basic, extended, GFM, nested inline styles, tables, code blocks, math, and edge cases.",
-      "publishedAt": "2026-08-08",
-      "category": "Technical Notes",
-      "tags": [
-        "markdown",
-        "testing",
-        "gfm",
-        "stress-test"
-      ],
-      "readingTime": "5 min read",
-      "published": true,
-      "htmlPath": "syntax-stress-test/syntax-stress-test.html",
-      "jsonPath": "syntax-stress-test/syntax-stress-test.json"
     }
   ]
 }
