@@ -1,0 +1,11 @@
+{
+  "title": "sample1",
+  "description": "Journal entry about sample1.",
+  "publishedAt": "2026-08-09",
+  "category": "Technical Notes",
+  "tags": [
+    "learning-journey"
+  ],
+  "readingTime": "2 min read",
+  "published": true
+}
