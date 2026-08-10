@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-10T04:20:59.354Z",
-  "count": 7,
+  "generatedAt": "2026-08-10T04:23:56.976Z",
+  "count": 8,
   "posts": [
     {
       "slug": "building-a-realtime-markdown-cms",
@@ -119,6 +119,23 @@
       "published": true,
       "htmlPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.html",
       "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
+    },
+    {
+      "slug": "syntax-stress-test",
+      "title": "Comprehensive Markdown Syntax & Edge-Case Stress Test",
+      "description": "Complete 100% syntax test suite covering basic, extended, GFM, nested inline styles, tables, code blocks, math, and edge cases.",
+      "publishedAt": "2026-08-08",
+      "category": "Learning",
+      "tags": [
+        "markdown",
+        "testing",
+        "gfm",
+        "stress-test"
+      ],
+      "readingTime": "5 min read",
+      "published": true,
+      "htmlPath": "syntax-stress-test/syntax-stress-test.html",
+      "jsonPath": "syntax-stress-test/syntax-stress-test.json"
     }
   ]
 }
