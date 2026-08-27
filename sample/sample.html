@@ -13,24 +13,447 @@
 <body class="article-body">
   <div class="article-container">
     <main class="article-content">
-      <h1 id="here-is-the-sample-file" class="article-h1">Here is the sample file</h1>
+      <h1 id="inline-style-nesting-overlap-test" class="article-h1">Inline Style Nesting & Overlap Test</h1>
+<h2 id="1-basic-nesting-properly-closed" class="article-h2">1. Basic Nesting (properly closed)</h2>
+<h3 id="bold-inside-italic" class="article-h3">Bold inside Italic</h3>
+<p><em>This is <em><strong>italic</strong></em> and <strong>this is bold</strong> inside it.</em></p>
+<h4 id="" class="article-h4"></h4>
+<p><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Link</a><br><figure class="article-image-figure"><img src="assets/file-dashboard.png" alt="Image" class="article-image article-img" /></figure><br><figure class="article-image-figure"><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><img src="assets/file-dashboard.png" alt="Image" class="article-image article-img" /></a></figure><br><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">https://www.google.com/</a></p>
+<hr>
+<h3 id="italic-inside-bold" class="article-h3">Italic inside Bold</h3>
+<p><strong>This is bold and <em>this is italic</em> inside it.</strong></p>
+<h3 id="bold-italic-inside-italic" class="article-h3">Bold+Italic inside Italic</h3>
+<p><em>This is italic and <em><strong>this is bold+italic</strong></em> inside it.</em></p>
+<h3 id="italic-inside-bold-italic" class="article-h3">Italic inside Bold+Italic</h3>
+<p><em><strong>This is bold+italic and <em>this is italic</em> inside it.</strong></em></p>
+<h3 id="strikethrough-inside-bold" class="article-h3">Strikethrough inside Bold</h3>
+<p><strong>This is bold and <del>this is strikethrough</del> inside it.</strong></p>
+<h3 id="highlight-inside-bold" class="article-h3">Highlight inside Bold</h3>
+<p><strong>This is bold and <mark>this is highlighted</mark> inside it.</strong></p>
+<h3 id="inline-code-inside-bold-note-code-usually-breaks-emphasis" class="article-h3">Inline Code inside Bold (Note: code usually breaks emphasis)</h3>
+<p><strong>This is bold and <code>this is code</code> inside it.</strong></p>
+<h3 id="bold-inside-highlight" class="article-h3">Bold inside Highlight</h3>
+<p><mark>This is highlighted and <strong>this is bold</strong> inside it.</mark></p>
+<h3 id="strikethrough-inside-highlight" class="article-h3">Strikethrough inside Highlight</h3>
+<p><mark>This is highlighted and <del>this is strikethrough</del> inside it.</mark></p>
+<h3 id="bold-italic-inside-strikethrough" class="article-h3">Bold+Italic inside Strikethrough</h3>
+<p><del>This is strikethrough and <em><strong>this is bold+italic</strong></em> inside it.</del></p>
+<h2 id="2-multiple-nesting-levels" class="article-h2">2. Multiple Nesting Levels</h2>
+<h3 id="bold-inside-italic-inside-strikethrough" class="article-h3">Bold inside Italic inside Strikethrough</h3>
+<p><del><em>This is italic <strong>and this is bold</strong> inside strikethrough</em></del></p>
+<h3 id="italic-inside-bold-inside-highlight" class="article-h3">Italic inside Bold inside Highlight</h3>
+<p><mark><strong>This is bold <em>and this is italic</em> inside highlight</strong></mark></p>
+<h3 id="code-inside-bold-inside-italic-code-should-be-literal" class="article-h3">Code inside Bold inside Italic (code should be literal)</h3>
+<p><em>This is italic and <strong>bold with <code>code</code> inside</strong>.</em></p>
+<h2 id="3-overlapping-interleaving-improper-nesting-may-render-differently" class="article-h2">3. Overlapping / Interleaving (improper nesting – may render differently)</h2>
+<h3 id="bold-starts-italic-starts-bold-ends-italic-ends-invalid-overlap" class="article-h3">Bold starts, Italic starts, Bold ends, Italic ends (invalid overlap)</h3>
+<p><em><em>bold <em>italic bold?</em></em> italic?</em> → typical render: <em><em>bold <em>italic bold?</em></em> italic?</em> becomes bold with italic part?</p>
+<p>Actual markdown: <code>**bold *italic** italic?*</code> – this is often parsed as bold with italic inside but may break.</p>
+<p>We&#39;ll write specific overlapping patterns:</p>
+<h4 id="pattern-a-bold-italic-bold" class="article-h4">Pattern A: `**bold *italic** bold?*`</h4>
+<p><em><em>bold <em>italic</em></em> bold?</em><br>Expected: maybe *<em>bold <em>italic</em></em> then italic? Actual varies.</p>
+<h4 id="pattern-b-italic-bold-italic-valid" class="article-h4">Pattern B: `*italic **bold** italic*` (valid)</h4>
+<p><em>italic <strong>bold</strong> italic</em></p>
+<h4 id="pattern-c-strikethrough-bold-valid" class="article-h4">Pattern C: `~~strikethrough **bold**~~` (valid)</h4>
+<p><del>strikethrough <strong>bold</strong></del></p>
+<h4 id="pattern-d-highlight-italic-valid" class="article-h4">Pattern D: `==highlight *italic*==` (valid)</h4>
+<p><mark>highlight <em>italic</em></mark></p>
+<h3 id="overlap-with-code-and-highlight-bold-code-code-interrupts" class="article-h3">Overlap with code and highlight: `**bold `code`**` – code interrupts.</h3>
+<h2 id="4-starting-and-ending-in-the-middle" class="article-h2">4. Starting and ending in the middle</h2>
+<h3 id="bold-starts-italic-starts-italic-ends-bold-ends-valid-nested" class="article-h3">Bold starts, italic starts, italic ends, bold ends (valid nested)</h3>
+<p><strong>bold <em>italic</em> bold</strong></p>
+<h3 id="italic-starts-bold-starts-bold-ends-italic-ends-valid" class="article-h3">Italic starts, bold starts, bold ends, italic ends (valid)</h3>
+<p><em>italic <strong>bold</strong> italic</em></p>
+<h3 id="bold-starts-strikethrough-starts-bold-ends-strikethrough-ends-invalid" class="article-h3">Bold starts, strikethrough starts, bold ends, strikethrough ends? (invalid)</h3>
+<p><strong>bold ~~strikethrough</strong>~~ → typical: bold plus strikethrough? Actually <code>**bold ~~strikethrough**~~</code> might be interpreted oddly.</p>
+<p>Write: <code>**bold ~~strikethrough**~~</code><br>Try it.</p>
+<h2 id="5-mixed-with-inline-code" class="article-h2">5. Mixed with inline code</h2>
+<h3 id="code-inside-bold-inside-italic" class="article-h3">Code inside bold inside italic</h3>
+<p><em>italic and <strong>bold with <code>code</code></strong></em></p>
+<h3 id="code-with-backticks-inside-bold-escape-needed" class="article-h3">Code with backticks inside bold – escape needed</h3>
+<p><strong>bold with <code>`code`</code> inside</strong></p>
+<h3 id="highlight-with-code" class="article-h3">Highlight with code</h3>
+<p><mark>highlight <code>code</code></mark></p>
+<h2 id="6-combining-all-six-in-one-line" class="article-h2">6. Combining all six in one line</h2>
+<p><strong>bold</strong> <em>italic</em> <em><strong>bold+italic</strong></em> <code>code</code> <del>strikethrough</del> <mark>highlight</mark></p>
+<h3 id="nesting-all-together" class="article-h3">Nesting all together:</h3>
+<p><em><strong><del><mark><code>bold+italic+strikethrough+highlight+code</code></mark></del></strong></em> – code inside highlight? Actually backticks break emphasis. So we can try without code.</p>
+<p><em><strong><del><mark>bold+italic+strikethrough+highlight</mark></del></strong></em> (does this render?)</p>
+<h2 id="7-edge-cases-spaces-and-no-spaces" class="article-h2">7. Edge cases: spaces and no spaces</h2>
+<p><strong>bold</strong>italic? – no space after bold? Usually works.<br><strong>bold</strong>italic – bold then italic? No, need delimiter.</p>
+<h2 id="8-overlap-with-escapings" class="article-h2">8. Overlap with escapings</h2>
+<p>**not bold** – escaped asterisks.</p>
+<hr>
+<p><strong>Note:</strong> The rendering of improper overlaps (like <code>**bold *italic** italic?*</code>) is processor‑dependent. This test suite will help you identify the behavior of your specific Markdown engine.</p>
+<p><figure class="article-image-figure"><img src="assets/file-dashboard.png" alt="hello world " title="hello world" class="article-image article-img" /><figcaption class="article-image-caption">hello world</figcaption></figure></p>
+<p><figure class="article-image-figure"><a href="https://www.markdownguide.org/extended-syntax/" target="_blank" rel="noopener noreferrer"><img src="assets/python-img.png" alt="hello world" class="article-image article-img" /></a></figure></p>
+<ol>
+<li><p>Parent OL item 1</p>
+<ul>
+<li>Child UL item 1 (level 2)</li>
+<li>Grandchild UL item 1 (level 3)<ul>
+<li>Great-grandchild UL item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Parent OL item 2</p>
+<ul>
+<li>Child UL item 2 (level 2)</li>
+<li>Grandchild UL item 2 (level 3)<ul>
+<li>Great-grandchild UL item 2 (lev el 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p><input disabled="" type="checkbox"> hello</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> hello word</p>
+</li>
+<li><p>[ ]</p>
+</li>
+</ul>
+<h1 id="blockquote-examples-in-markdown" class="article-h1">Blockquote Examples in Markdown</h1>
+<p><a href="#blockquote-examples-in-markdown">Blockquote Examples in Markdown</a></p>
+<h2 id="1-basic-single-level-blockquote" class="article-h2">1. Basic Single‑Level Blockquote</h2>
+<blockquote>
+<p>This is a simple blockquote.<br>It can span multiple lines.<br>Just put a <code>&gt;</code> at the start of each line.</p>
+</blockquote>
+<hr>
+<h2 id="2-multi-paragraph-blockquote" class="article-h2">2. Multi‑Paragraph Blockquote</h2>
+<blockquote>
+<p>This is the first paragraph of a blockquote.</p>
+<p>This is the second paragraph. Notice the blank line with a <code>&gt;</code> to keep it inside the quote.</p>
+<p>And a third paragraph for good measure.</p>
+</blockquote>
+<hr>
+<h2 id="3-nested-blockquotes-2-3-and-4-levels" class="article-h2">3. Nested Blockquotes (2, 3, and 4 levels)</h2>
+<blockquote>
+<p>Level 1 – outer quote</p>
+<blockquote>
+<p>Level 2 – nested inside level 1</p>
+<blockquote>
+<p>Level 3 – nested inside level 2</p>
+<blockquote>
+<p>Level 4 – deepest level</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>You can go back out by stopping the <code>&gt;</code> characters:</p>
+<blockquote>
+<p>Level 1 again</p>
+<blockquote>
+<p>Level 2<br>Back to level 1 (just one <code>&gt;</code>)</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="4-blockquote-with-other-block-elements" class="article-h2">4. Blockquote with Other Block Elements</h2>
+<h3 id="blockquote-containing-a-heading" class="article-h3">Blockquote containing a heading</h3>
+<blockquote>
+<h2 id="this-is-a-heading-inside-a-blockquote" class="article-h2">This is a heading inside a blockquote</h2>
+<p>And regular text below it.</p>
+</blockquote>
+<h3 id="blockquote-containing-a-list-unordered" class="article-h3">Blockquote containing a list (unordered)</h3>
+<blockquote>
+<ul>
+<li>Item 1 in a blockquote</li>
+<li>Item 2 in a blockquote<ul>
+<li>Nested list item inside the quote<ul>
+<li>hello world</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Item 3</li>
+</ul>
+</blockquote>
+<h3 id="blockquote-containing-an-ordered-list" class="article-h3">Blockquote containing an ordered list</h3>
+<blockquote>
+<ol>
+<li>First numbered item</li>
+<li>Second numbered item<ol>
+<li>Nested numbered item</li>
+</ol>
+</li>
+<li>Third numbered item</li>
+</ol>
+</blockquote>
+<h3 id="blockquote-containing-a-task-list" class="article-h3">Blockquote containing a task list</h3>
+<blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> Task 1 inside a blockquote</li>
+<li><input checked="" disabled="" type="checkbox"> Task 2 (completed) inside a blockquote</li>
+<li><input disabled="" type="checkbox"> Task 3 with subtask<ul>
+<li><input disabled="" type="checkbox"> Subtask inside the quote</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="blockquote-containing-code" class="article-h3">Blockquote containing code</h3>
+<blockquote>
+<p>Here is some <code>inline code</code> inside a quote.</p>
+<div class="article-code-block-wrapper"><div class="article-code-header" style="justify-content: flex-end;"><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code>// Code block inside a blockquote
+function hello() {
+  console.log("Hello, world!");
+}</code></pre></div>
+<p>And back to regular quoted text.</p>
+</blockquote>
+<hr>
+<h2 id="5-blockquote-with-horizontal-rule-other-inline-styling" class="article-h2">5. Blockquote with Horizontal Rule & Other Inline Styling</h2>
+<blockquote>
+<p><strong>Bold text</strong> and <em>italic text</em> inside a blockquote.<br>You can also have <a href="https://example.com" target="_blank" rel="noopener noreferrer">links</a> and <code>code</code> spans.</p>
+<hr>
+<p>(Horizontal rule above works inside a blockquote too.)</p>
+</blockquote>
+<hr>
+<h2 id="6-mixed-nesting-blockquote-list-sub-quote" class="article-h2">6. Mixed Nesting – Blockquote + List + Sub‑Quote</h2>
+<blockquote>
+<ol>
+<li>First item in an ordered list inside a quote</li>
+<li>Second item<blockquote>
+<p>Nested blockquote <em>inside</em> a list item inside the outer blockquote<br>Still inside the nested quote</p>
+</blockquote>
+</li>
+<li>Third item – back to the outer list</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="7-practical-example-a-styled-callout" class="article-h2">7. Practical Example – A Styled Callout</h2>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Blockquotes are often used for callouts, warnings, or side notes.</p>
+<blockquote>
+<p>🔥 <strong>Deep note:</strong> You can nest them to show hierarchy or replies in a thread.</p>
+<blockquote>
+<p>✅ <strong>Final confirmation:</strong> This works in most Markdown flavors (GFM, CommonMark, etc.).</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="all-9-combinations-with-nesting-up-to-4-levels" class="article-h1">All 9 Combinations with Nesting up to 4 Levels</h1>
+<p>Each example shows a parent list (level 1), a child (level 2), a grandchild (level 3), and a great‑grandchild (level 4).<br>The required combination is given in the heading.</p>
+<hr>
+<h2 id="1-ordered-list-nested-unordered-list-bullet" class="article-h2">1. Ordered List → Nested Unordered List (Bullet)</h2>
+<hr>
+<h2 id="2-ordered-list-nested-task-list" class="article-h2">2. Ordered List → Nested Task List</h2>
+<ol>
+<li>Parent OL item 1<ul>
+<li><input disabled="" type="checkbox"> Child task item 1 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 1 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parent OL item 2<ul>
+<li><input disabled="" type="checkbox"> Child task item 2 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 2 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 2 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="3-ordered-list-nested-ordered-list-numbered" class="article-h2">3. Ordered List → Nested Ordered List (Numbered)</h2>
+<ol>
+<li>Parent OL item 1<ol>
+<li>Child OL item 1 (level 2)<ol>
+<li>Grandchild OL item 1 (level 3)</li>
+<li>Great-grandchild OL item 1 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Parent OL item 2<ol>
+<li>Child OL item 2 (level 2)<ol>
+<li>Grandchild OL item 2 (level 3)</li>
+<li>Great-grandchild OL item 2 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="4-unordered-list-nested-ordered-list-numbered" class="article-h2">4. Unordered List → Nested Ordered List (Numbered)</h2>
+<ul>
+<li>Parent UL item 1<ol>
+<li>Child OL item 1 (level 2)</li>
+<li>Grandchild OL item 1 (level 3)<ol>
+<li>Great-grandchild OL item 1 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Parent UL item 2<ol>
+<li>Child OL item 2 (level 2)</li>
+<li>Grandchild OL item 2 (level 3)<ol>
+<li>Great-grandchild OL item 2 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="5-unordered-list-nested-unordered-list-bullet" class="article-h2">5. Unordered List → Nested Unordered List (Bullet)</h2>
+<ul>
+<li>Parent UL item 1<ul>
+<li>Child UL item 1 (level 2)</li>
+<li>Grandchild UL item 1 (level 3)<ul>
+<li>Great-grandchild UL item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parent UL item 2<ul>
+<li>Child UL item 2 (level 2)</li>
+<li>Grandchild UL item 2 (level 3)<ul>
+<li>Great-grandchild UL item 2 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-unordered-list-nested-task-list" class="article-h2">6. Unordered List → Nested Task List</h2>
+<ul>
+<li>Parent UL item 1<ul>
+<li><input disabled="" type="checkbox"> Child task item 1 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 1 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parent UL item 2<ul>
+<li><input disabled="" type="checkbox"> Child task item 2 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 2 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 2 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-task-list-nested-ordered-list-numbered" class="article-h2">7. Task List → Nested Ordered List (Numbered)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Parent task item 1<ol>
+<li>Child OL item 1 (level 2)</li>
+<li>Grandchild OL item 1 (level 3)<ol>
+<li>Great-grandchild OL item 1 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><input disabled="" type="checkbox"> Parent task item 2<ol>
+<li>Child OL item 2 (level 2)</li>
+<li>Grandchild OL item 2 (level 3)<ol>
+<li>Great-grandchild OL item 2 (level 4)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="8-task-list-nested-unordered-list-bullet" class="article-h2">8. Task List → Nested Unordered List (Bullet)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Parent task item 1<ul>
+<li>Child UL item 1 (level 2)</li>
+<li>Grandchild UL item 1 (level 3)<ul>
+<li>Great-grandchild UL item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Parent task item 2<ul>
+<li>Child UL item 2 (level 2)</li>
+<li>Grandchild UL item 2 (level 3)<ul>
+<li>Great-grandchild UL item 2 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="9-task-list-nested-task-list" class="article-h2">9. Task List → Nested Task List</h2>
+<ul>
+<li><p><input disabled="" type="checkbox"> Parent task item 1</p>
+<ul>
+<li><input disabled="" type="checkbox"> Child task item 1 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 1 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 1 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> Parent task item 2</p>
+<ul>
+<li><input disabled="" type="checkbox"> Child task item 2 (level 2)</li>
+<li><input disabled="" type="checkbox"> Grandchild task item 2 (level 3)<ul>
+<li><input disabled="" type="checkbox"> Great-grandchild task item 2 (level 4)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="hello-world" class="article-h2">[ ] hello world</h2>
+</li>
+<li><p><input disabled="" type="checkbox"> world</p>
+</li>
+</ul>
+<p>Here is the sample file</p>
 <p><a href="assets/index.html" target="_blank" rel="noopener noreferrer">Html File</a></p>
 <p><a href="assets/markdown.md" target="_blank" rel="noopener noreferrer">Markdown File</a></p>
-<p><a href="assets/hello-dashboard.png" target="_blank" rel="noopener noreferrer">Image File</a></p>
+<p><a href="assets/file-dashboard.png" target="_blank" rel="noopener noreferrer">Image File</a></p>
+<p><a href="assets/blog-world.json" target="_blank" rel="noopener noreferrer">blog world</a></p>
+<ol>
+<li>hello world is one of the good program<ul>
+<li><input disabled="" type="checkbox"> hello world is one of the good program asdfasdfasd</li>
+<li><input disabled="" type="checkbox"> hello world is one of the good program</li>
+<li><input disabled="" type="checkbox"> hello world</li>
+</ul>
+</li>
+<li>hello world is one of the good program</li>
+<li>hello world is one of the good program</li>
+<li>hello world is one of the good program</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> hello world is one of the good program<ul>
+<li><input disabled="" type="checkbox"> hello world is one of the good program asdfasdfasd</li>
+<li><input disabled="" type="checkbox"> hello world is one of the good program</li>
+<li><input disabled="" type="checkbox"> hello world</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> hello world is one of the good program</li>
+<li><input disabled="" type="checkbox"> hello world is one of the good program</li>
+<li><input disabled="" type="checkbox"> hello world is one of the good program</li>
+</ul>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <strong>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</strong> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <em>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</em> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <strong><em>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</em></strong> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <del>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</del> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <mark>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</mark> here is some of the content after inline style</p>
-<p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line hello^Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line^ here is some of the content after inline style</p>
+<p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line hello<sup>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</sup> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line hello<sub>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</sub> here is some of the content after inline style</p>
 <p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <code>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</code> here is some of the content after inline style</p>
-<p>Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</a> here is some of the content after inline style</p>
+<p>Here is the samepl content and also some of the same extra text over here for testing the inline style <sup class="article-footnote-ref"><a href="#fn-hello" id="fnref-hello" role="doc-noteref">&#91;1&#93;</a></sup>which is renderin from the next line <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Here is the samepl content and also some of the same extra text over here for testing the inline style which is renderin from the next line</a> here is some of the content after inline style</p>
+<dl>
+  <dt>hello world</dt>
+  <dd>hello world</dd>
+</dl><p><a href="#inline-style-nesting-overlap-test">here is the</a></p>
 <div class="article-code-block-wrapper"><div class="article-code-header"><span class="article-code-filename">Python</span><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-python">print("Hello world")
 a = 10
 b = 40
 print(f"{a} + {b} = {a+b}")</code></pre></div>
-<p><img src="assets/hello-dashboard.png" alt="Hello Dashboard" class="article-img"></p>
+<p><figure class="article-image-figure"><img src="assets/python-img.png" alt="Hello Dashboard" class="article-image article-img" /></figure></p>
+<p>hello world<br>: </p>
+<section class="article-footnotes" role="doc-endnotes">
+  <hr>
+  <ol>
+    <li id="fn-hai">hello word is the good text <a href="#fnref-hai" class="article-footnote-backref" role="doc-backlink">↩</a></li>
+    <li id="fn-hello">hello world <a href="#fnref-hello" class="article-footnote-backref" role="doc-backlink">↩</a></li>
+  </ol>
+</section>
 
     </main>
   </div>

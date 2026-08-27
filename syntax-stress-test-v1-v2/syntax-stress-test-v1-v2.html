@@ -143,7 +143,7 @@ function helloWorld() {
 }</code></pre></div>
 </li>
 <li><p><strong>Item 4: Image inside List</strong></p>
-<p><img src="assets/python-img.png" alt="Sample Architecture" title="Sample Architecture Image" class="article-img"></p>
+<p><figure class="article-image-figure"><img src="assets/python-img.png" alt="Sample Architecture" title="Sample Architecture Image" class="article-image article-img" /><figcaption class="article-image-caption">Sample Architecture Image</figcaption></figure></p>
 </li>
 </ol>
 <hr>
@@ -163,38 +163,9 @@ function helloWorld() {
 </blockquote>
 <hr>
 <h2 id="section-tables" class="article-h2">6. GFM Responsive Tables & Edge Cases</h2>
-<div class="article-table-wrapper"><table>
-<thead>
-<tr>
-<th align="left">Syntax</th>
-<th align="center">Alignment</th>
-<th align="right">Format</th>
-<th align="left">Status</th>
-<th align="left">Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>Left Aligned</strong></td>
-<td align="center">Center</td>
-<td align="right"><em>Italic</em></td>
-<td align="left"><code>OK</code></td>
-<td align="left">Normal text</td>
-</tr>
-<tr>
-<td align="left"><a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">DuckDuckGo</a></td>
-<td align="center"><strong>Center</strong></td>
-<td align="right"><del>Strikethrough</del></td>
-<td align="left"><mark>Active</mark></td>
-<td align="left">Pipe: &#124;</td>
-</tr>
-<tr>
-<td align="left">Multi-line <br> Break</td>
-<td align="center">Right</td>
-<td align="right"><mark>Highlight</mark></td>
-<td align="left"><strong>Done</strong></td>
-<td align="left"><code>var x = 10;</code></td>
-</tr>
-</tbody></table></div>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th align="left">Syntax</th><th align="center">Alignment</th><th align="right">Format</th><th align="left">Status</th><th align="left">Notes</th></tr></thead><tbody><tr><td align="left"><strong>Left Aligned</strong></td><td align="center">Center</td><td align="right"><em>Italic</em></td><td align="left"><code>OK</code></td><td align="left">Normal text</td></tr>
+<tr><td align="left"><a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">DuckDuckGo</a></td><td align="center"><strong>Center</strong></td><td align="right"><del>Strikethrough</del></td><td align="left"><mark>Active</mark></td><td align="left">Pipe: &#124;</td></tr>
+<tr><td align="left">Multi-line <br> Break</td><td align="center">Right</td><td align="right"><mark>Highlight</mark></td><td align="left"><strong>Done</strong></td><td align="left"><code>var x = 10;</code></td></tr></tbody></table></div>
 <hr>
 <h2 id="section-code" class="article-h2">7. Fenced Code Blocks & Syntax Highlighting</h2>
 <h3 id="json-code-block" class="article-h3">JSON Code Block</h3>
@@ -237,11 +208,11 @@ class JournalPost:
 <ul>
 <li>Standalone Image:</li>
 </ul>
-<p><img src="assets/python-img.png" alt="Python Mascot" title="Python Mascot" class="article-img"></p>
+<p><figure class="article-image-figure"><img src="assets/python-img.png" alt="Python Mascot" title="Python Mascot" class="article-image article-img" /><figcaption class="article-image-caption">Python Mascot</figcaption></figure></p>
 <ul>
 <li>Linked Image:</li>
 </ul>
-<p><a href="https://python.org" target="_blank" rel="noopener noreferrer"><img src="assets/python-img.png" alt="Python Mascot Link" title="Click to visit Python" class="article-img"></a></p>
+<p><figure class="article-image-figure"><a href="https://python.org" target="_blank" rel="noopener noreferrer"><img src="assets/python-img.png" alt="Python Mascot Link" title="Click to visit Python" class="article-image article-img" /></a><figcaption class="article-image-caption">Click to visit Python</figcaption></figure></p>
 <hr>
 <h2 id="section-extended" class="article-h2">9. Extended Features, Definition Lists & Footnotes</h2>
 <h3 id="definition-lists" class="article-h3">Definition Lists</h3>
@@ -266,7 +237,7 @@ class JournalPost:
 <h3 id="backslash-escaping-test" class="article-h3">Backslash Escaping Test</h3>
 <p>*This is not a bullet point*</p>
 <p>#This is not a heading#</p>
-<p>[This is not a link]<span class="article-math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>r</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">url</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6944em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span></span></span></span></span></p>
+<p>[This is not a link](url)</p>
 <hr>
 <h2 id="section-html" class="article-h2">10. Raw HTML & Custom Component Integration</h2>
 <details>
@@ -283,7 +254,7 @@ class JournalPost:
   <hr>
   <ol>
     <li id="fn-1">This is the simple footnote content. <a href="#fnref-1" class="article-footnote-backref" role="doc-backlink">↩</a></li>
-    <li id="fn-bignote">Here is a multi-paragraph footnote with code: <em><strong>INLINE_CODE_9</strong></em> Followed by another paragraph. <a href="#fnref-bignote" class="article-footnote-backref" role="doc-backlink">↩</a></li>
+    <li id="fn-bignote">Here is a multi-paragraph footnote with code:<br><em><strong>INLINE_CODE_9</strong></em><br>Followed by another paragraph. <a href="#fnref-bignote" class="article-footnote-backref" role="doc-backlink">↩</a></li>
   </ol>
 </section>
 

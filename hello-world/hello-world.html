@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello world</title>
+  <meta name="description" content="Journal entry about hello world.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="../article.css">
+  <script src="../article.js" defer></script>
+</head>
+<body class="article-body">
+  <div class="article-container">
+    <main class="article-content">
+      <h1 id="complete-markdown-syntax-reference" class="article-h1">Complete Markdown Syntax Reference</h1>
+<p>This document demonstrates every Markdown syntax element described in the original specification and extended syntax, without using HTML. All examples are written in pure Markdown.</p>
+<hr>
+<p><figure class="article-image-figure"><img src="assets/movemind-logo.svg" alt="Image description" title="hello world" class="article-image article-img" /><figcaption class="article-image-caption">hello world</figcaption></figure></p>
+<!-- table:table-870439 -->
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th align="left">Column 1</th><th align="center">Column 2</th><th align="left">Column 3</th><th align="left">Header 4</th><th align="left">Header 5</th><th align="left">Header 6</th><th align="left">Header 7</th><th align="left">Header 8</th><th align="left">Header 9</th><th align="left">Header 10</th><th align="left">Header 11</th><th align="left">Header 12</th><th align="left">Header 13</th></tr></thead><tbody><tr><td align="left">Cell 1</td><td align="center">Cell 2</td><td align="left">Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 2, Cell 1</td><td align="center">Row 2, Cell 2</td><td align="left">Row 2, Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 3, Cell 1</td><td align="center">Row 3, Cell 2</td><td align="left">Row 3, Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 4, Cell 1</td><td align="center">Row 4, Cell 2</td><td align="left">Row 4, Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 5, Cell 1</td><td align="center">Row 5, Cell 2</td><td align="left">Row 5, Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 6, Cell 1</td><td align="center">Row 6, Cell 2</td><td align="left">Row 6, Cell 3</td><td align="left">Cell 4</td><td align="left">Cell 5</td><td align="left">Cell 6</td><td align="left">Cell 7</td><td align="left">Cell 8</td><td align="left">Cell 9</td><td align="left">Cell 10</td><td align="left">Cell 11</td><td align="left">Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 7, Cell 1</td><td align="center">Row 7, Cell 2</td><td align="left">Row 7, Cell 3</td><td align="left">Row 7, Cell 4</td><td align="left">Row 7, Cell 5</td><td align="left">Row 7, Cell 6</td><td align="left">Row 7, Cell 7</td><td align="left">Row 7, Cell 8</td><td align="left">Row 7, Cell 9</td><td align="left">Row 7, Cell 10</td><td align="left">Row 7, Cell 11</td><td align="left">Row 7, Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 8, Cell 1</td><td align="center">Row 8, Cell 2</td><td align="left">Row 8, Cell 3</td><td align="left">Row 8, Cell 4</td><td align="left">Row 8, Cell 5</td><td align="left">Row 8, Cell 6</td><td align="left">Row 8, Cell 7</td><td align="left">Row 8, Cell 8</td><td align="left">Row 8, Cell 9</td><td align="left">Row 8, Cell 10</td><td align="left">Row 8, Cell 11</td><td align="left">Row 8, Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 9, Cell 1</td><td align="center">Row 9, Cell 2</td><td align="left">Row 9, Cell 3</td><td align="left">Row 9, Cell 4</td><td align="left">Row 9, Cell 5</td><td align="left">Row 9, Cell 6</td><td align="left">Row 9, Cell 7</td><td align="left">Row 9, Cell 8</td><td align="left">Row 9, Cell 9</td><td align="left">Row 9, Cell 10</td><td align="left">Row 9, Cell 11</td><td align="left">Row 9, Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 10, Cell 1</td><td align="center">Row 10, Cell 2</td><td align="left">Row 10, Cell 3</td><td align="left">Row 10, Cell 4</td><td align="left">Row 10, Cell 5</td><td align="left">Row 10, Cell 6</td><td align="left">Row 10, Cell 7</td><td align="left">Row 10, Cell 8</td><td align="left">Row 10, Cell 9</td><td align="left">Row 10, Cell 10</td><td align="left">Row 10, Cell 11</td><td align="left">Row 10, Cell 12</td><td align="left">Cell 13</td></tr>
+<tr><td align="left">Row 11, Cell 1</td><td align="center">Row 11, Cell 2</td><td align="left">Row 11, Cell 3</td><td align="left">Row 11, Cell 4</td><td align="left">Row 11, Cell 5</td><td align="left">Row 11, Cell 6</td><td align="left">Row 11, Cell 7</td><td align="left">Row 11, Cell 8</td><td align="left">Row 11, Cell 9</td><td align="left">Row 11, Cell 10</td><td align="left">Row 11, Cell 11</td><td align="left">Row 11, Cell 12</td><td align="left">Cell 13</td></tr></tbody></table></div>
+<!-- /table:table-870439 --><h1 id="hello-owrld" class="article-h1">hello owrld</h1>
+<h2 id="1-headings" class="article-h2">1. Headings</h2>
+<h3 id="atx-headings-with" class="article-h3">ATX Headings (with `#`)</h3>
+<h1 id="heading-level-1" class="article-h1">Heading level 1</h1>
+<h2 id="heading-level-2" class="article-h2">Heading level 2</h2>
+<h3 id="heading-level-3" class="article-h3">Heading level 3</h3>
+<h4 id="heading-level-4" class="article-h4">Heading level 4</h4>
+<h3 id="alternate-setext-headings" class="article-h3">Alternate Setext Headings</h3>
+<h1 id="heading-level-1" class="article-h1">Heading level 1</h1>
+<h2 id="heading-level-2" class="article-h2">Heading level 2</h2>
+<h3 id="best-practices" class="article-h3">Best Practices</h3>
+<p><a href="#hello-owrld">sample heading</a></p>
+<ul>
+<li>Always put a space between the <code>#</code> and the heading text.</li>
+<li>Put blank lines before and after headings.</li>
+</ul>
+<hr>
+<h2 id="2-paragraphs" class="article-h2">2. Paragraphs</h2>
+<p>I really like using Markdown.</p>
+<p>I think I&#39;ll use it to format all of my documents from now on.</p>
+<p><strong>Best Practice:</strong> Do not indent paragraphs with spaces or tabs.</p>
+<hr>
+<h2 id="3-line-breaks" class="article-h2">3. Line Breaks</h2>
+<p>This is the first line.<br>And this is the second line.</p>
+<p>Alternatively, you can use the <code>&lt;br&gt;</code> tag, but that&#39;s HTML.</p>
+<p><strong>Best Practice:</strong> Use two trailing spaces at the end of a line.</p>
+<hr>
+<h2 id="4-emphasis" class="article-h2">4. Emphasis</h2>
+<h3 id="bold" class="article-h3">Bold</h3>
+<p>I just love <strong>bold text</strong>.<br>I just love <strong>bold text</strong>.<br>Love<strong>is</strong>bold</p>
+<p><strong>Best Practice:</strong> Use asterisks <code>**</code> for bold, especially inside words.</p>
+<h3 id="italic" class="article-h3">Italic</h3>
+<p>Italicized text is the <em>cat&#39;s meow</em>.<br>Italicized text is the <em>cat&#39;s meow</em>.<br>A<em>cat</em>meow</p>
+<p><strong>Best Practice:</strong> Use asterisks <code>*</code> for italic, especially inside words.</p>
+<h3 id="bold-and-italic-combined" class="article-h3">Bold and Italic (combined)</h3>
+<p>This text is <em><strong>really important</strong></em>.<br>This text is <em><strong>really important</strong></em>.<br>This text is <strong><em>really important</em></strong>.<br>This text is <strong><em>really important</em></strong>.<br>This is really<em><strong>very</strong></em>important text.</p>
+<p><strong>Best Practice:</strong> Use three asterisks <code>***</code> for combined emphasis.</p>
+<hr>
+<h2 id="5-blockquotes" class="article-h2">5. Blockquotes</h2>
+<h3 id="single-blockquote" class="article-h3">Single Blockquote</h3>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+</blockquote>
+<h3 id="multiple-paragraphs" class="article-h3">Multiple Paragraphs</h3>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+<h3 id="nested-blockquotes" class="article-h3">Nested Blockquotes</h3>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<blockquote>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+</blockquote>
+<h3 id="with-other-elements" class="article-h3">With Other Elements</h3>
+<blockquote>
+<h4 id="the-quarterly-results-look-great" class="article-h4">The quarterly results look great!</h4>
+<ul>
+<li>Revenue was off the chart.</li>
+<li>Profits were higher than ever.</li>
+</ul>
+<p> <em>Everything</em> is going according to <strong>plan</strong>.</p>
+</blockquote>
+<p><strong>Best Practice:</strong> Put blank lines before and after blockquotes.</p>
+<hr>
+<h2 id="6-lists" class="article-h2">6. Lists</h2>
+<h3 id="ordered-lists" class="article-h3">Ordered Lists</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ol>
+<p>Numbers need not be sequential, but must start with 1:</p>
+<ol>
+<li><p>First item</p>
+</li>
+<li><p>Second item</p>
+</li>
+<li><p>Third item</p>
+</li>
+<li><p>Fourth item</p>
+</li>
+<li><p>First item</p>
+</li>
+<li><p>Second item</p>
+</li>
+<li><p>Third item</p>
+</li>
+<li><p>Fourth item</p>
+</li>
+</ol>
+<h4 id="nested-ordered-lists" class="article-h4">Nested Ordered Lists</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item<ol>
+<li>Indented item</li>
+<li>Indented item</li>
+</ol>
+</li>
+<li>Fourth item</li>
+</ol>
+<p><strong>Best Practice:</strong> Use periods (<code>.</code>) as delimiters, not parentheses.</p>
+<h3 id="unordered-lists" class="article-h3">Unordered Lists</h3>
+<p>Using dashes:</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<p>Using asterisks:</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<p>Using plus signs:</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<h4 id="nested-unordered-lists" class="article-h4">Nested Unordered Lists</h4>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item<ul>
+<li>Indented item</li>
+<li>Indented item</li>
+</ul>
+</li>
+<li>Fourth item</li>
+</ul>
+<h4 id="starting-list-items-with-numbers-escaping" class="article-h4">Starting List Items with Numbers (escaping)</h4>
+<ul>
+<li>1968. A great year!</li>
+<li>I think 1969 was second best.</li>
+</ul>
+<p><strong>Best Practice:</strong> Do not mix delimiters (<code>-</code>, <code>*</code>, <code>+</code>) in the same list.</p>
+<h3 id="adding-elements-in-lists" class="article-h3">Adding Elements in Lists</h3>
+<h4 id="paragraphs" class="article-h4">Paragraphs</h4>
+<ul>
+<li><p>This is the first list item.</p>
+</li>
+<li><p>Here&#39;s the second list item.</p>
+<p>  I need to add another paragraph below the second list item.</p>
+</li>
+<li><p>And here&#39;s the third list item.</p>
+</li>
+</ul>
+<h4 id="blockquotes" class="article-h4">Blockquotes</h4>
+<ul>
+<li><p>This is the first list item.</p>
+</li>
+<li><p>Here&#39;s the second list item.</p>
+<blockquote>
+<p>A blockquote would look great below the second list item.</p>
+</blockquote>
+</li>
+<li><p>And here&#39;s the third list item.</p>
+</li>
+</ul>
+<h4 id="code-blocks-indented-8-spaces-or-2-tabs" class="article-h4">Code Blocks (indented 8 spaces or 2 tabs)</h4>
+<ol>
+<li><p>Open the file.</p>
+</li>
+<li><p>Find the following code block on line 21:</p>
+<div class="article-code-block-wrapper"><div class="article-code-header" style="justify-content: flex-end;"><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code> &lt;html&gt;
+   &lt;head&gt;
+     &lt;title&gt;Test&lt;/title&gt;
+   &lt;/head&gt;
+</code></pre></div>
+</li>
+<li><p>Update the title to match the name of your website.</p>
+</li>
+</ol>
+<h4 id="images" class="article-h4">Images</h4>
+<ol>
+<li><p>Open the file containing the Linux mascot.</p>
+</li>
+<li><p>Marvel at its beauty.</p>
+<p> <figure class="article-image-figure"><img src="assets/sample-image-testing.png" alt="Tux, the Linux mascot" title="hello world" class="article-image article-img" /><figcaption class="article-image-caption">hello world</figcaption></figure></p>
+</li>
+<li><p>Close the file.</p>
+</li>
+</ol>
+<h4 id="nested-lists-mixed" class="article-h4">Nested Lists (mixed)</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item<ul>
+<li>Indented item</li>
+<li>Indented item</li>
+</ul>
+</li>
+<li>Fourth item</li>
+</ol>
+<hr>
+<h2 id="7-code" class="article-h2">7. Code</h2>
+<h3 id="inline-code" class="article-h3">Inline Code</h3>
+<p>At the command prompt, type <code>nano</code>.</p>
+<h3 id="escaping-backticks" class="article-h3">Escaping Backticks</h3>
+<p><code>Use `code` in your Markdown file.</code></p>
+<h3 id="code-blocks-indented-4-spaces" class="article-h3">Code Blocks (indented 4 spaces)</h3>
+<div class="article-code-block-wrapper"><div class="article-code-header" style="justify-content: flex-end;"><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code>&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre></div>
+<hr>
+<h2 id="8-horizontal-rules" class="article-h2">8. Horizontal Rules</h2>
+<hr>
+<hr>
+<hr>
+<p><strong>Best Practice:</strong> Put blank lines before and after horizontal rules.</p>
+<hr>
+<h2 id="9-links" class="article-h2">9. Links</h2>
+<h3 id="basic-link" class="article-h3">Basic Link</h3>
+<p>My favorite search engine is <a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">Duck Duck Go</a>.</p>
+<h3 id="with-title" class="article-h3">With Title</h3>
+<p>My favorite search engine is <a href="https://duckduckgo.com" title="The best search engine for privacy" target="_blank" rel="noopener noreferrer">Duck Duck Go</a>.</p>
+<h3 id="urls-and-email-addresses-auto-linking" class="article-h3">URLs and Email Addresses (auto‑linking)</h3>
+<p><a href="https://www.markdownguide.org" target="_blank" rel="noopener noreferrer">https://www.markdownguide.org</a><br><a href="mailto:fake@example.com" target="_blank" rel="noopener noreferrer">fake@example.com</a></p>
+<h3 id="formatting-links" class="article-h3">Formatting Links</h3>
+<p>I love supporting the <strong><a href="https://eff.org" target="_blank" rel="noopener noreferrer">EFF</a></strong>.<br>This is the <em><a href="https://www.markdownguide.org" target="_blank" rel="noopener noreferrer">Markdown Guide</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>
+<h3 id="reference-style-links" class="article-h3">Reference‑style Links</h3>
+<p>In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends<br>of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to<br>eat: it was a <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="Hobbit lifestyles" target="_blank" rel="noopener noreferrer">hobbit-hole</a>, and that means comfort.</p>
+<p><strong>Best Practice:</strong> URL‑encode spaces as <code>%20</code> and parentheses as <code>%28</code> and <code>%29</code>.</p>
+<hr>
+<h2 id="10-images" class="article-h2">10. Images</h2>
+<h3 id="basic-image" class="article-h3">Basic Image</h3>
+<p><figure class="article-image-figure"><img src="assets/sample-image-testing.png" alt="The San Juan Mountains are beautiful" title="San Juan Mountains" class="article-image article-img" /><figcaption class="article-image-caption">San Juan Mountains</figcaption></figure></p>
+<h3 id="linked-image" class="article-h3">Linked Image</h3>
+<p><figure class="article-image-figure"><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><img src="assets/sample-image-testing.png" alt="An old rock in the desert" title="Shiprock, New Mexico by Beau Rogers" class="article-image article-img" /></a><figcaption class="article-image-caption">Shiprock, New Mexico by Beau Rogers</figcaption></figure></p>
+<hr>
+<h2 id="11-escaping-characters" class="article-h2">11. Escaping Characters</h2>
+<p>* Without the backslash, this would be a bullet in an unordered list.</p>
+<h3 id="escapable-characters" class="article-h3">Escapable Characters</h3>
+<p>` backtick<br>* asterisk<br>_ underscore<br>{ } curly braces<br>[ ] brackets<br>&lt; &gt; angle brackets<br>( ) parentheses<br># pound sign<br>+ plus sign<br>- minus sign (hyphen)<br>. dot<br>! exclamation mark<br>| pipe</p>
+<hr>
+<h2 id="12-html-mention-only" class="article-h2">12. HTML (mention only)</h2>
+<p>Markdown applications allow HTML, but we are focusing on pure Markdown. Therefore, we omit HTML examples.</p>
+<hr>
+<h1 id="extended-syntax" class="article-h1">Extended Syntax</h1>
+<h2 id="13-tables" class="article-h2">13. Tables</h2>
+<h3 id="basic-table" class="article-h3">Basic Table</h3>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>Syntax</th><th>Description</th></tr></thead><tbody><tr><td>Header</td><td>Title</td></tr>
+<tr><td>Paragraph</td><td>Text</td></tr></tbody></table></div>
+<h3 id="table-with-alignment" class="article-h3">Table with Alignment</h3>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th align="left">Syntax</th><th align="center">Description</th><th align="right">Test Text</th></tr></thead><tbody><tr><td align="left">Header</td><td align="center">Title</td><td align="right">Here&#39;s this</td></tr>
+<tr><td align="left">Paragraph</td><td align="center">Text</td><td align="right">And more</td></tr></tbody></table></div>
+<h3 id="escaping-pipe-character" class="article-h3">Escaping Pipe Character</h3>
+<p>Use <code>&amp;#124;</code> to display a literal pipe.</p>
+<hr>
+<h2 id="14-fenced-code-blocks" class="article-h2">14. Fenced Code Blocks</h2>
+<div class="article-code-block-wrapper"><div class="article-code-header" style="justify-content: flex-end;"><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}</code></pre></div>
+<h3 id="alternative-tildes" class="article-h3">Alternative Tildes</h3>
+<div class="article-code-block-wrapper"><div class="article-code-header" style="justify-content: flex-end;"><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}</code></pre></div>
+<hr>
+<h2 id="15-syntax-highlighting" class="article-h2">15. Syntax Highlighting</h2>
+<div class="article-code-block-wrapper"><div class="article-code-header"><span class="article-code-filename">Json</span><button class="article-code-copy-btn" type="button" aria-label="Copy code">Copy</button></div><pre><code class="language-json">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}</code></pre></div>
+<hr>
+<h2 id="16-footnotes" class="article-h2">16. Footnotes</h2>
+<p>Here&#39;s a simple footnote,<sup class="article-footnote-ref"><a href="#fn-1" id="fnref-1" role="doc-noteref">&#91;1&#93;</a></sup> and here&#39;s a longer one.<sup class="article-footnote-ref"><a href="#fn-bignote" id="fnref-bignote" role="doc-noteref">&#91;2&#93;</a></sup></p>
+<hr>
+<h2 id="17-heading-ids" class="article-h2">17. Heading IDs</h2>
+<h3 id="custom-id" class="article-h3">My Great Heading</h3>
+<p>Linking to it: <a href="#custom-id">Heading IDs</a></p>
+<hr>
+<h2 id="18-definition-lists" class="article-h2">18. Definition Lists</h2>
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+</dl><dl>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term.</dd>
+  <dd>This is another definition of the second term.</dd>
+</dl><hr>
+<h2 id="19-strikethrough" class="article-h2">19. Strikethrough</h2>
+<p><del>The world is flat.</del> We now know that the world is round.</p>
+<hr>
+<h2 id="20-task-lists" class="article-h2">20. Task Lists</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
+<li><input disabled="" type="checkbox"> Update the website</li>
+<li><input disabled="" type="checkbox"> Contact the media</li>
+</ul>
+<hr>
+<h2 id="21-emoji" class="article-h2">21. Emoji</h2>
+<h3 id="copy-and-paste-examples" class="article-h3">Copy and paste (examples)</h3>
+<p>😀 🎉 🔥</p>
+<h3 id="shortcodes" class="article-h3">Shortcodes</h3>
+<p>Gone camping! ⛺ Be back soon.</p>
+<p>That is so funny! 😂</p>
+<hr>
+<h2 id="22-highlight" class="article-h2">22. Highlight</h2>
+<p>I need to highlight these <mark>very important words</mark>.</p>
+<hr>
+<h2 id="23-subscript" class="article-h2">23. Subscript</h2>
+<p>H<sub>2</sub>O</p>
+<hr>
+<h2 id="24-superscript" class="article-h2">24. Superscript</h2>
+<p>X<sup>2</sup></p>
+<hr>
+<h2 id="25-automatic-url-linking" class="article-h2">25. Automatic URL Linking</h2>
+<p><a href="http://www.example.com" target="_blank" rel="noopener noreferrer">http://www.example.com</a></p>
+<h3 id="disabling-automatic-linking" class="article-h3">Disabling Automatic Linking</h3>
+<p><code>http://www.example.com</code></p>
+<hr>
+<p><strong>End of Markdown Syntax Reference</strong></p>
+<!-- table:table-441766 -->
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th align="left">Column 1</th><th align="center">Column 2</th><th align="left">Column 3</th></tr></thead><tbody><tr><td align="left">Cell 1</td><td align="center">Cell 2</td><td align="left">Cell 3</td></tr>
+<tr><td align="left">Cell 4</td><td align="center">Cell 5</td><td align="left">Cell 6</td></tr></tbody></table></div>
+<!-- /table:table-441766 --><section class="article-footnotes" role="doc-endnotes">
+  <hr>
+  <ol>
+    <li id="fn-1">This is the first footnote. <a href="#fnref-1" class="article-footnote-backref" role="doc-backlink">↩</a></li>
+    <li id="fn-bignote">Here&#39;s one with multiple paragraphs and code.<br><br>Indent paragraphs to include them in the footnote.<br><br><em><strong>INLINE_CODE_18</strong></em><br><br>Add as many paragraphs as you like. <a href="#fnref-bignote" class="article-footnote-backref" role="doc-backlink">↩</a></li>
+  </ol>
+</section>
+
+    </main>
+  </div>
+</body>
+</html>

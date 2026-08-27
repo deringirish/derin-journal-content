@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-08-10T13:31:56.393Z",
-  "count": 9,
+  "generatedAt": "2026-08-27T08:17:44.377Z",
+  "count": 11,
   "posts": [
+    {
+      "slug": "asdfasdfasdf",
+      "title": "asdfasdfasdf",
+      "description": "Journal entry about asdfasdfasdf.",
+      "publishedAt": "2026-08-27",
+      "category": "AAAAAAAA",
+      "tags": [],
+      "readingTime": "2 min read",
+      "published": true,
+      "htmlPath": "asdfasdfasdf/asdfasdfasdf.html",
+      "jsonPath": "asdfasdfasdf/asdfasdfasdf.json"
+    },
     {
       "slug": "building-a-realtime-markdown-cms",
       "title": "Project Case Study: Building a Realtime Markdown CMS",
@@ -46,7 +58,7 @@
         "machine-learning",
         "python",
         "deep-learning",
-        "ai"
+        "ai-knowledge"
       ],
       "readingTime": "6 min read",
       "published": true,
@@ -77,7 +89,7 @@
       "category": "Research Journey",
       "tags": [
         "vector-search",
-        "ai",
+        "ai-knowledge",
         "algorithms",
         "database"
       ],
@@ -85,6 +97,21 @@
       "published": true,
       "htmlPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.html",
       "jsonPath": "exploring-vector-search-embeddings/exploring-vector-search-embeddings.json"
+    },
+    {
+      "slug": "hello-world",
+      "title": "hello world",
+      "description": "Journal entry about hello world.",
+      "publishedAt": "2026-08-12",
+      "category": "Deep Work - good",
+      "tags": [
+        "deep-work",
+        "hello"
+      ],
+      "readingTime": "2 min read",
+      "published": true,
+      "htmlPath": "hello-world/hello-world.html",
+      "jsonPath": "hello-world/hello-world.json"
     },
     {
       "slug": "mastering-modern-markdown-architecture",
@@ -147,7 +174,7 @@
         "tag18",
         "tag19"
       ],
-      "readingTime": "1 min read",
+      "readingTime": "2 min read",
       "published": true,
       "htmlPath": "sample/sample.html",
       "jsonPath": "sample/sample.json"
@@ -164,7 +191,7 @@
         "gfm",
         "stress-test"
       ],
-      "readingTime": "5 min read",
+      "readingTime": "2 min read",
       "published": true,
       "htmlPath": "syntax-stress-test-v1-v2/syntax-stress-test-v1-v2.html",
       "jsonPath": "syntax-stress-test-v1-v2/syntax-stress-test-v1-v2.json"
