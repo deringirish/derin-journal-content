@@ -1,19 +1,7 @@
 {
-  "generatedAt": "2026-08-27T08:17:44.377Z",
-  "count": 11,
+  "generatedAt": "2026-08-27T11:41:38.406Z",
+  "count": 10,
   "posts": [
-    {
-      "slug": "asdfasdfasdf",
-      "title": "asdfasdfasdf",
-      "description": "Journal entry about asdfasdfasdf.",
-      "publishedAt": "2026-08-27",
-      "category": "AAAAAAAA",
-      "tags": [],
-      "readingTime": "2 min read",
-      "published": true,
-      "htmlPath": "asdfasdfasdf/asdfasdfasdf.html",
-      "jsonPath": "asdfasdfasdf/asdfasdfasdf.json"
-    },
     {
       "slug": "building-a-realtime-markdown-cms",
       "title": "Project Case Study: Building a Realtime Markdown CMS",
@@ -103,7 +91,7 @@
       "title": "hello world",
       "description": "Journal entry about hello world.",
       "publishedAt": "2026-08-12",
-      "category": "Deep Work - good",
+      "category": "Deep Work - good  sdflkajsdlfkajshdfas adf",
       "tags": [
         "deep-work",
         "hello"
@@ -148,36 +136,18 @@
       "jsonPath": "navigating-senior-engineering-milestones/navigating-senior-engineering-milestones.json"
     },
     {
-      "slug": "sample",
-      "title": "sample",
-      "description": "Here is the sample description abou this project",
-      "publishedAt": "2026-08-08",
-      "category": "Learning",
+      "slug": "sample1-1-2",
+      "title": "sample1",
+      "description": "Journal entry about sample1.",
+      "publishedAt": "2026-08-09",
+      "category": "Technical Notes asdfa",
       "tags": [
-        "tag1",
-        "tag2",
-        "tag3",
-        "tag4",
-        "tag5",
-        "tag6",
-        "tag7",
-        "tag8",
-        "tag9",
-        "tag10",
-        "tag11",
-        "tag12",
-        "tag13",
-        "tag14",
-        "tag15",
-        "tag16",
-        "tag17",
-        "tag18",
-        "tag19"
+        "learning-journey"
       ],
       "readingTime": "2 min read",
       "published": true,
-      "htmlPath": "sample/sample.html",
-      "jsonPath": "sample/sample.json"
+      "htmlPath": "sample1-1-2/sample1-1-2.html",
+      "jsonPath": "sample1-1-2/sample1-1-2.json"
     },
     {
       "slug": "syntax-stress-test-v1-v2",
